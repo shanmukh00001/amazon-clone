@@ -26,6 +26,16 @@ const products= [{
     count:56
   },
   priceCents:799,
+},
+{
+  image:'images/products/black-2-slot-toaster.jpg',
+  name :'2 Slot Toaster-Black',
+  rating:{
+    stars:5,
+    count:2197
+  },
+  priceCents:1899,
+  
 }
 ]; 
 
@@ -36,7 +46,7 @@ const products= [{
 // }); .
 
 //to combine all the html into one string and put it on the webpage  variable prodHTML
-let productsHTML=" ";
+let productsHTML="";
 for (let i = 0; i < products.length; i++) {
   const product = products[i];
   productsHTML+=
