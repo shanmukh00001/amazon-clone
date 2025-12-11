@@ -8,6 +8,7 @@
 // products.forEach((product) =>{they both are the same
 // }); .
 import {cart} from "../data/cart.js";
+import { products } from "../data/products.js";
 //const cart=[];
 let productsHTML="";
 for (let i = 0; i < products.length; i++) {
