@@ -7,8 +7,8 @@
 //step 2 generate the html
 // products.forEach((product) =>{they both are the same
 // }); .
-
-//to combine all the html into one string and put it on the webpage  variable prodHTML
+import {cart} from "../data/cart.js";
+//const cart=[];
 let productsHTML="";
 for (let i = 0; i < products.length; i++) {
   const product = products[i];
