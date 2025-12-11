@@ -93,8 +93,14 @@ for (let i = 0; i < buttons.length; i++) {
     quantity:1
   });
   }
+  let cartquantity=0;
+  cart.forEach((item)=>{
+    cartquantity+=item.quantity;
+  });
 
-    console.log(cart);
+
+  document.querySelector('.js-cart-quantity').innerHTML=cartquantity;
+    
   });
 }
 //added a data product attribute 
