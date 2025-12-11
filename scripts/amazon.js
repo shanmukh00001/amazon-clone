@@ -57,14 +57,46 @@ for (let i = 0; i < products.length; i++) {
             Added
           </div>
 
-          <button class="add-to-cart-button button-primary">
+          <button class="add-to-cart-button button-primary
+          js-add-to-cart"
+          data-product-id="${product.id}">
+          
             Add to Cart
           </button>
         </div>`
 
         //console.log(html);
 }
-console.log(productsHTML);
+//console.log(productsHTML);
 
 document.querySelector('.js-products-grid').
 innerHTML=productsHTML;
+
+const buttons = document.querySelectorAll('.js-add-to-cart');
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener('click', () => {
+  const productId=buttons[i].dataset.productId;//kebab case to ccamel case
+
+  let matchingItem;
+  cart.forEach((item)=>{
+    if(productId===item.productId){
+      matchingItem=item;
+      
+    }
+  });
+  if(matchingItem){
+    matchingItem.quantity+=1;
+  }
+  else {
+    cart.push({
+    productId: productId,
+    quantity:1
+  });
+  }
+
+    console.log(cart);
+  });
+}
+//added a data product attribute 
+//  from the kotlin ---->  data- product-name --acessing->dataset.productName
+
