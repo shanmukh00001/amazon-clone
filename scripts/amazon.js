@@ -9,6 +9,7 @@
 // }); .
 import {cart, addTOcart} from "../data/cart.js";
 import { products } from "../data/products.js";
+import {formatCurrency} from './utils/money.js'
 //const cart=[];
 let productsHTML="";
 for (let i = 0; i < products.length; i++) {
