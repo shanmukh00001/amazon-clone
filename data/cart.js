@@ -1,4 +1,4 @@
-export const cart=[{//these are the sample values for the development
+export let cart=[{//these are the sample values for the development
   productId:'e43638ce-6aa0-4b85-b27f-e1d07eb678c6',
   quantity:2,
 },{
@@ -25,4 +25,13 @@ export function addTOcart(productId){
   }
 }
 
+
+export function removeFromCart(productId){
+  for(let i=0;i<cart.length;i++){
+      if(productId===cart[i].productId){
+        cart.splice(i,1);
+      }
+    }
+  
+}
 
