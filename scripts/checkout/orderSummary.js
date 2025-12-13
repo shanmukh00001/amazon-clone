@@ -1,5 +1,5 @@
 import {cart, removeFromCart, updateDeliveryOption} from '../../data/cart.js';//exact syntax should be present even spaces
-import {products} from '../../data/products.js';
+import {products, getProduct} from '../../data/products.js';
 import {formatCurrency} from '../utils/money.js'
 import {hello} from 'https://unpkg.com/supersimpledev@1.0.1/hello.esm.js'
 import dayjs from 'https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js'
@@ -11,12 +11,7 @@ export function renderOrederSummary(){
     let cartSummaryHTML='';
     cart.forEach((cartItem)=>{
     const productId=cartItem.productId;
-    let matchingproduct;
-    products.forEach((product)=>{
-      if(product.id===productId){
-        matchingproduct=product;
-      }
-    });
+    let matchingproduct=getProduct(productId);
 
 
     const deliveryOptionId=cartItem.deliveryOptionId;
