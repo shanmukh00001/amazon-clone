@@ -59,8 +59,8 @@ for (let i = 0; i < products.length; i++) {
             Added
           </div>
 
-          <button class="add-to-cart-button button-primary
-          js-add-to-cart"
+          <button class="add-to-cart-button 
+          button-primary js-add-to-cart"
           data-product-id="${product.id}">
           
             Add to Cart
