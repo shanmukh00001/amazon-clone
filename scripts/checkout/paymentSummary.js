@@ -18,8 +18,7 @@ cart.forEach((cartItem) => {
   shippingPriceCents+=deliveryOption.priceCents;
 
 });
-console.log(productPriceCents);
-console.log(shippingPriceCents);
+
 
 
 
