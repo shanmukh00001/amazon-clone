@@ -8,10 +8,17 @@
 // products.forEach((product) =>{they both are the same
 // }); .
 import {cart, addTOcart} from "../data/cart.js";
-import { products } from "../data/products.js";
+import { products, loadProducts} from "../data/products.js";
 import {formatCurrency} from './utils/money.js'
 //const cart=[];
+
+loadProducts(renderProductsGrid);
+//we can use function asa parameter
+function renderProductsGrid(){
+
+
 let productsHTML="";
+
 for (let i = 0; i < products.length; i++) {
   const product = products[i];
   productsHTML+=
@@ -95,3 +102,4 @@ for (let i = 0; i < buttons.length; i++) {
 //added a data product attribute 
 //  from the kotlin ---->  data- product-name --acessing->dataset.productName
 
+}
