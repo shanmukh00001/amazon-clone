@@ -1,10 +1,13 @@
 import { renderOrederSummary } from "../../scripts/checkout/orderSummary.js";
 import { addTOcart, cart, loadFromStorage } from "../../data/cart.js";
-
+import { loadProducts } from "../../data/products.js";
 
 
 describe('test suite:renderOrderSummary',()=>{
-
+  beforeAll((done)=>{
+    loadProducts();
+    done();
+  });
   it('displays thr cart ',()=>{
     document.querySelector('.js-test-container')
     .innerHTML=`
@@ -21,6 +24,7 @@ describe('test suite:renderOrderSummary',()=>{
   deliveryOptionId:'2'
 }]);
         });
+
         loadFromStorage();
         renderOrederSummary();
 
