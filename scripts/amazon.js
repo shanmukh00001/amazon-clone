@@ -52,6 +52,8 @@ for (let i = 0; i < products.length; i++) {
             </select>
           </div>
 
+          ${product.extraInfoHTML()}
+
           <div class="product-spacer"></div>
 
           <div class="added-to-cart">
