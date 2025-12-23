@@ -81,8 +81,10 @@ const product1=new Product({
     sizeChartLink: "images/clothing-size-chart.png"
   })
 //console.log(product1);
-console.log(tshirt);
+//console.log(tshirt);
 
+// const date=new Date();
+// console.log(date);
 
 export const products = [
   {
@@ -752,3 +754,4 @@ export const products = [
 
 //using method in class to make it tcleaner code
 
+//arrow function does not change this..  to avoid accedentally overwriting this  
